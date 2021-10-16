@@ -311,7 +311,9 @@ body {
 }
 
 .wrapper .screen .previous-operand {
-  height: 30px;
+  height: auto;
+  word-break: break-all;
+  min-height: 30px;
   width: 100%;
   font-size: 25px;
   line-height: 30px;
