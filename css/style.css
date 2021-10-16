@@ -1,0 +1,532 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+:root {
+  --bg-color-light: #E6E6E6;
+  --text-color-light: #36362C;
+  --numbers-operations-color-light: #36362C;
+  --button-color-light: #E5E4E1;
+  --button-shadow-color-light: #A79E91;
+  --text-del-reset-color-light: #FFFFFF;
+  --button-del-reset-color-light: #378187;
+  --button-del-reset-shadow-color-light: #1B6066;
+  --text-equals-color-light: #FFFFFF;
+  --button-equals-color-light: #C85402;
+  --button-equals-shadow-color-light: #873901;
+  --switch-bg-color-light: #D2CDCD;
+  --switch-circle-color-light: #C85402;
+  --screen-color-light: #EEEEEE;
+  --keyboard-color-light: #D2CDCD;
+  --bg-color-dark: #3A4663;
+  --text-color-dark: white;
+  --numbers-operations-color-dark: #434A59;
+  --button-color-dark: #EAE3DC;
+  --button-shadow-color-dark: #B3A497;
+  --text-del-reset-color-dark: #FFFFFF;
+  --button-del-reset-color-dark: #647198;
+  --button-del-reset-shadow-color-dark: #414E73;
+  --text-equals-color-dark: #FFFFFF;
+  --button-equals-color-dark: #D03F2F;
+  --button-equals-shadow-color-dark: #93261A;
+  --switch-bg-color-dark: #242D44;
+  --switch-circle-color-dark: #D03F2F;
+  --screen-color-dark: #181F33;
+  --keyboard-color-dark: #242D44;
+  --bg-color-purple: #17062A;
+  --text-color-purple: #FFE53D;
+  --numbers-operations-color-purple: #FFE53D;
+  --button-color-purple: #331C4D;
+  --button-shadow-color-purple: #881C9E;
+  --text-del-reset-color-purple: #FFFFFF;
+  --button-del-reset-color-purple: #56077C;
+  --button-del-reset-shadow-color-purple: #BE15F4;
+  --text-equals-color-purple: #1A2327;
+  --button-equals-color-purple: #00DED0;
+  --button-equals-shadow-color-purple: #6CF9F1;
+  --switch-bg-color-purple: #1E0936;
+  --switch-circle-color-purple: #00DED0;
+  --screen-color-purple: #1E0936;
+  --keyboard-color-purple: #1E0936;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: var(--bg-color-dark);
+    --text-color: var(--text-color-dark);
+    --numbers-operations-color: var(--numbers-operations-color-dark);
+    --button-color: var(--button-color-dark);
+    --button-shadow-color: var(--button-shadow-color-dark);
+    --text-del-reset-color: var(--text-del-reset-color-dark);
+    --button-del-reset-color: var(--button-del-reset-color-dark);
+    --button-del-reset-shadow-color: var(--button-del-reset-shadow-color-dark);
+    --text-equals-color: var(--text-equals-color-dark);
+    --button-equals-color: var(--button-equals-color-dark);
+    --button-equals-shadow-color: var(--button-equals-shadow-color-dark);
+    --switch-bg-color: var(--switch-bg-color-dark);
+    --switch-circle-color: var(--switch-circle-color-dark);
+    --screen-color: var(--screen-color-dark);
+    --keyboard-color: var(--keyboard-color-dark);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: var(--bg-color-light);
+    --text-color: var(--text-color-light);
+    --numbers-operations-color: var(--numbers-operations-color-light);
+    --button-color: var(--button-color-light);
+    --button-shadow-color: var(--button-shadow-color-light);
+    --text-del-reset-color: var(--text-del-reset-color-light);
+    --button-del-reset-color: var(--button-del-reset-color-light);
+    --button-del-reset-shadow-color: var(--button-del-reset-shadow-color-light);
+    --text-equals-color: var(--text-equals-color-light);
+    --button-equals-color: var(--button-equals-color-light);
+    --button-equals-shadow-color: var(--button-equals-shadow-color-light);
+    --switch-bg-color: var(--switch-bg-color-light);
+    --switch-circle-color: var(--switch-circle-color-light);
+    --screen-color: var(--screen-color-light);
+    --keyboard-color: var(--keyboard-color-light);
+  }
+}
+
+[color-scheme="dark"] {
+  --bg-color: var(--bg-color-dark);
+  --text-color: var(--text-color-dark);
+  --numbers-operations-color: var(--numbers-operations-color-dark);
+  --button-color: var(--button-color-dark);
+  --button-shadow-color: var(--button-shadow-color-dark);
+  --text-del-reset-color: var(--text-del-reset-color-dark);
+  --button-del-reset-color: var(--button-del-reset-color-dark);
+  --button-del-reset-shadow-color: var(--button-del-reset-shadow-color-dark);
+  --text-equals-color: var(--text-equals-color-dark);
+  --button-equals-color: var(--button-equals-color-dark);
+  --button-equals-shadow-color: var(--button-equals-shadow-color-dark);
+  --switch-bg-color: var(--switch-bg-color-dark);
+  --switch-circle-color: var(--switch-circle-color-dark);
+  --screen-color: var(--screen-color-dark);
+  --keyboard-color: var(--keyboard-color-dark);
+}
+
+[color-scheme="light"] {
+  --bg-color: var(--bg-color-light);
+  --text-color: var(--text-color-light);
+  --numbers-operations-color: var(--numbers-operations-color-light);
+  --button-color: var(--button-color-light);
+  --button-shadow-color: var(--button-shadow-color-light);
+  --text-del-reset-color: var(--text-del-reset-color-light);
+  --button-del-reset-color: var(--button-del-reset-color-light);
+  --button-del-reset-shadow-color: var(--button-del-reset-shadow-color-light);
+  --text-equals-color: var(--text-equals-color-light);
+  --button-equals-color: var(--button-equals-color-light);
+  --button-equals-shadow-color: var(--button-equals-shadow-color-light);
+  --switch-bg-color: var(--switch-bg-color-light);
+  --switch-circle-color: var(--switch-circle-color-light);
+  --screen-color: var(--screen-color-light);
+  --keyboard-color: var(--keyboard-color-light);
+}
+
+[color-scheme="purple"] {
+  --bg-color: var(--bg-color-purple);
+  --text-color: var(--text-color-purple);
+  --numbers-operations-color: var(--numbers-operations-color-purple);
+  --button-color: var(--button-color-purple);
+  --button-shadow-color: var(--button-shadow-color-purple);
+  --text-del-reset-color: var(--text-del-reset-color-purple);
+  --button-del-reset-color: var(--button-del-reset-color-purple);
+  --button-del-reset-shadow-color: var(--button-del-reset-shadow-color-purple);
+  --text-equals-color: var(--text-equals-color-purple);
+  --button-equals-color: var(--button-equals-color-purple);
+  --button-equals-shadow-color: var(--button-equals-shadow-color-purple);
+  --switch-bg-color: var(--switch-bg-color-purple);
+  --switch-circle-color: var(--switch-circle-color-purple);
+  --screen-color: var(--screen-color-purple);
+  --keyboard-color: var(--keyboard-color-purple);
+}
+
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Spartan';
+}
+
+.wrapper {
+  width: 540px;
+  height: 710px;
+}
+
+.wrapper .logo-n-theme {
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.wrapper .logo-n-theme h1 {
+  margin: 0px;
+  margin-top: 9px;
+  color: var(--text-color);
+}
+
+.wrapper .logo-n-theme .theme-changer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 45px;
+  color: var(--text-color);
+}
+
+.wrapper .logo-n-theme .theme-changer p {
+  margin-top: auto;
+  margin-bottom: 4px;
+  margin-right: 25px;
+}
+
+.wrapper .logo-n-theme .theme-changer .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 45px;
+  width: 70px;
+}
+
+.wrapper .logo-n-theme .theme-changer .button .switch {
+  width: 70px;
+  height: 25px;
+  background-color: var(--switch-bg-color);
+  border-radius: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "first second third";
+  padding-inline: 2px;
+}
+
+.wrapper .logo-n-theme .theme-changer .button .switch .selector {
+  background-color: var(--switch-circle-color);
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  margin-block: auto;
+  margin-inline: auto;
+}
+
+.wrapper .logo-n-theme .theme-changer .button .switch .first-theme {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: first;
+}
+
+.wrapper .logo-n-theme .theme-changer .button .switch .second-theme {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: second;
+}
+
+.wrapper .logo-n-theme .theme-changer .button .switch .third-theme {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: third;
+}
+
+.wrapper .logo-n-theme .theme-changer .button .switch:hover {
+  cursor: pointer;
+}
+
+.wrapper .logo-n-theme .theme-changer .button .theme-number {
+  height: 20px;
+  width: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper .logo-n-theme .theme-changer .button .theme-number p {
+  margin: 0px;
+}
+
+.wrapper .screen {
+  width: 100%;
+  min-height: 130px;
+  height: auto;
+  background-color: var(--screen-color);
+  border-radius: 10px;
+  margin-bottom: 25px;
+  color: var(--text-color);
+  text-align: right;
+  padding-inline: 35px;
+  padding-block: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper .screen .previous-operand {
+  height: 30px;
+  width: 100%;
+  font-size: 25px;
+  line-height: 30px;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+.wrapper .screen .current-operand {
+  height: auto;
+  width: 100%;
+  font-size: 48px;
+  word-break: break-all;
+}
+
+.wrapper .keyboard {
+  width: 100%;
+  height: 480px;
+  background-color: var(--keyboard-color);
+  border-radius: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+  gap: 25px;
+  padding: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrapper .keyboard button {
+  background-color: var(--button-color);
+  color: var(--numbers-operations-color);
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: inset 0px -4px 0px var(--button-shadow-color);
+          box-shadow: inset 0px -4px 0px var(--button-shadow-color);
+  outline: 0px;
+  border: 0px;
+  border-radius: 10px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.wrapper .keyboard button:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(160%);
+          filter: brightness(160%);
+}
+
+.wrapper .keyboard .eight {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.wrapper .keyboard .nine {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+.wrapper .keyboard .del {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 4 / 2 / 5;
+  font-size: 20px;
+  color: var(--text-del-reset-color);
+  background-color: var(--button-del-reset-color);
+  -webkit-box-shadow: inset 0px -4px 0px var(--button-del-reset-shadow-color);
+          box-shadow: inset 0px -4px 0px var(--button-del-reset-shadow-color);
+}
+
+.wrapper .keyboard .plus {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 4 / 3 / 5;
+}
+
+.wrapper .keyboard .minus {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 4 / 4 / 5;
+}
+
+.wrapper .keyboard .x {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-area: 4 / 4 / 5 / 5;
+}
+
+.wrapper .keyboard .multiply {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-area: 4 / 4 / 5 / 5;
+}
+
+.wrapper .keyboard .four {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.wrapper .keyboard .five {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.wrapper .keyboard .six {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+.wrapper .keyboard .one {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 1 / 4 / 2;
+}
+
+.wrapper .keyboard .two {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+.wrapper .keyboard .three {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 3 / 4 / 4;
+}
+
+.wrapper .keyboard .decimal {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 4 / 1 / 5 / 2;
+}
+
+.wrapper .keyboard .zero {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 4 / 2 / 5 / 3;
+}
+
+.wrapper .keyboard .divide {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 4 / 3 / 5 / 4;
+}
+
+.wrapper .keyboard .reset {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 5 / 1 / 6 / 3;
+  font-size: 20px;
+  color: var(--text-del-reset-color);
+  background-color: var(--button-del-reset-color);
+  -webkit-box-shadow: inset 0px -4px 0px var(--button-del-reset-shadow-color);
+          box-shadow: inset 0px -4px 0px var(--button-del-reset-shadow-color);
+}
+
+.wrapper .keyboard .equals {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: 5 / 3 / 6 / 5;
+  font-size: 20px;
+  color: var(--text-equals-color);
+  background-color: var(--button-equals-color);
+  -webkit-box-shadow: inset 0px -4px 0px var(--button-equals-shadow-color);
+          box-shadow: inset 0px -4px 0px var(--button-equals-shadow-color);
+}
+
+.wrapper .keyboard .seven {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
+}
+/*# sourceMappingURL=style.css.map */

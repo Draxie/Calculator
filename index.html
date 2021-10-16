@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main class="wrapper">
+
+    <div class="logo-n-theme">
+
+      <h1>calc</h1>
+      <div class="theme-changer">
+        <p>THEME</p>
+
+        <div class="button">
+
+          <div class="theme-number">
+            <p id="theme-1">1</p>
+            <p id="theme-2">2</p>
+            <p id="theme-3">3</p>
+          </div>
+
+          <div class="switch" id="switch">
+            <span id="selector" class="selector"></span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="screen" id="screen">
+        <div id="previous-operand" class="previous-operand"></div>
+        <div id="current-operand" class="current-operand"></div>
+    </div>
+
+    <section class="keyboard" id="keyboard">
+      <button class="zero" id="number">0</button>
+      <button class="one" id="number">1</button>
+      <button class="two" id="number">2</button>
+      <button class="three" id="number">3</button>
+      <button class="four" id="number">4</button>
+      <button class="five" id="number">5</button>
+      <button class="six" id="number">6</button>
+      <button class="seven" id="number">7</button>
+      <button class="eight" id="number">8</button>
+      <button class="nine" id="number">9</button>
+      <button class="decimal" id="number">.</button>
+      <button class="plus" id="operation">+</button>
+      <button class="minus" id="operation">-</button>
+      <button class="multiply" id="operation">x</button>
+      <button class="divide" id="operation">/</button>
+      <button class="equals" id="equals">=</button>
+      <button class="del" id="del">DEL</button>
+      <button class="reset" id="reset">RESET</button>
+    </section>
+
+  </main>
+<script src="/js/theme-changer.js"></script>
+<script src="/js/calculator.js"></script>
+</body>
+</html>
