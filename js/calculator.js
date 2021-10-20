@@ -12,7 +12,7 @@ class Calculator {
     this.operation = undefined
   }
 
-  //brisanje znaka ili operanda sa kraja unosa
+  //brisanje cifre sa kraja unosa
   delete() {
     this.currentOperand = this.currentOperand.toString().slice(0, -1)
   }
